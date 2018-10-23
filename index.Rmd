@@ -2,7 +2,7 @@
 title: "Experiencing Plotly"
 author: "Paul Charlet"
 date: "October 23, 2018"
-output: html_document
+output: ioslides_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,7 @@ We will use ```sin()``` function to create a 3d ScatterPlot with plotty. Please,
 
 ## 3d plotting
 
-```{r,message=FALSE}
+```{r,message=FALSE,echo=FALSE}
 xinit <- seq(-pi,pi,length.out = 50)
 yinit <- seq(-1,1,length.out = 20)
 x <- integer()
@@ -28,3 +28,5 @@ z <- sin(x)*y
 df <- data.frame(x,y,z)
 plot_ly(df,x=x,y=y,z=z,type = "scatter3d",mode="markers",opacity=.3,marker=list(size=2,color=df$z))
 ```
+
+## Thank you !
